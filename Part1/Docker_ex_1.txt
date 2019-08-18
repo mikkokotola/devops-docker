@@ -1,0 +1,46 @@
+EXERCISE 1.1
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS
+                      PORTS               NAMES
+f8bdae9ba14b        nginx               "nginx -g 'daemon of…"   42 seconds ago      Exited (0) 30 seconds ago                       heuristic_elgamal
+e7bd17889584        nginx               "nginx -g 'daemon of…"   44 seconds ago      Exited (0) 24 seconds ago                       naughty_ellis
+42dcc5f7ccc2        nginx               "nginx -g 'daemon of…"   47 seconds ago      Up 46 seconds               80/tcp              festive_sinoussi
+523d21b2dd9e        nginx               "nginx -g 'daemon of…"   3 minutes ago       Exited (0) 2 minutes ago                        romantic_allen
+2f35998c7e9f        nginx               "-d"                     3 minutes ago       Created                     80/tcp              recursing_bell
+41ae26ebc97d        nginx               "nginx -g 'daemon of…"   4 minutes ago       Exited (0) 2 minutes ago                        mystifying_merkle
+
+
+EXERCISE 1.2
+
+λ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS
+         PORTS               NAMES
+
+
+λ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+
+EXERCISE 1.3
+
+Give me the password: basics
+You found the correct password. Secret message is:
+"This is the secret message"
+
+
+EXERCISE 1.4
+
+λ docker run devopsdockeruh/exec_bash_exercise
+
+λ docker exec -it strange_lumiere bash
+root@8963c9d2b6a0:/usr/app# tail -f ./logs.txt
+Sun, 18 Aug 2019 13:10:36 GMT
+Sun, 18 Aug 2019 13:10:39 GMT
+Secret message is:
+"Docker is easy"
+
+EXERCISE 1.5
+λ docker run -d --name forrest ubuntu:16.04 sh -c "while true; do date; sleep 1; done"
+λ docker exec forrest apt-get update
+λ docker exec -it forrest apt-get install curl
+λ docker exec -it forrest sh -c "echo 'Input website:'; read website; echo 'Searching..'; sleep 1; curl http://$website;"

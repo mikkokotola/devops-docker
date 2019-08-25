@@ -44,3 +44,15 @@ EXERCISE 1.5
 λ docker exec forrest apt-get update
 λ docker exec -it forrest apt-get install curl
 λ docker exec -it forrest sh -c "echo 'Input website:'; read website; echo 'Searching..'; sleep 1; curl http://$website;"
+
+
+EXERCISE 1.6
+λ docker build -t docker-clock .
+λ docker run docker-clock
+Dockerfile in the subdirectory.
+
+
+EXERCISE 1.7
+λ docker build -t curlerim .
+λ docker run -it curlerim
+Dockerfile in subdirectory.

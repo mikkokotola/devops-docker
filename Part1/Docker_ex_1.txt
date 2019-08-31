@@ -56,3 +56,12 @@ EXERCISE 1.7
 λ docker build -t curlerim .
 λ docker run -it curlerim
 Dockerfile in subdirectory.
+
+EXERCISE 1.8
+docker pull devopsdockeruh/first_volume_exercise
+docker run -v "%cd%/logs.txt":/usr/app/logs.txt devopsdockeruh/first_volume_exercise
+
+EXERCISE 1.9
+docker run -p 80 devopsdockeruh/ports_exercise
+docker port 035
+Navigate to http://localhost:32769 with browser and see message "Ports configured correctly!!"

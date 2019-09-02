@@ -65,3 +65,7 @@ EXERCISE 1.9
 docker run -p 80 devopsdockeruh/ports_exercise
 docker port 035
 Navigate to http://localhost:32769 with browser and see message "Ports configured correctly!!"
+
+EXERCISE 1.10
+Dockerfile in subdirectory.
+

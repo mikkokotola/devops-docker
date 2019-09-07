@@ -68,4 +68,10 @@ Navigate to http://localhost:32769 with browser and see message "Ports configure
 
 EXERCISE 1.10
 Dockerfile in subdirectory.
+docker build -t front-example .
+docker run -p 5000:5000 front-example
 
+EXERCISE 1.11
+Dockerfile in subdirectory.
+docker build -t backend-example .
+docker run -p 8000:8000 -v "%cd%/logs.txt":/usr/app/logs.txt backend-example

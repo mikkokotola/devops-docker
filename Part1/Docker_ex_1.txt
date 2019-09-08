@@ -86,4 +86,16 @@ Dockerfiles in subdirectories.
     docker build -t front-example .
     docker run -p 5000:5000 front-example
 
+EXERCISE 1.13
+Didn't get this exercise to work.
+The WIP Dockerfile in subdirectory.
+When building the docker image, the build ended in the following error:
 
+    Step 5/6 : RUN ["./mvnw", "package"]
+    ---> Running in 50980a9e6efe
+    standard_init_linux.go:211: exec user process caused "no such file or directory"
+    The command './mvnw package' returned a non-zero code: 1
+
+EXERCISE 1.14
+docker build -t rails-example .
+docker run -it -p 3000:3000 rails-example

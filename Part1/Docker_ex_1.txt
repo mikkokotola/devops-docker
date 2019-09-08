@@ -75,3 +75,15 @@ EXERCISE 1.11
 Dockerfile in subdirectory.
 docker build -t backend-example .
 docker run -p 8000:8000 -v "%cd%/logs.txt":/usr/app/logs.txt backend-example
+
+EXERCISE 1.12
+Dockerfiles in subdirectories.
+    Backend:
+    docker build -t backend-example .
+    docker run -p 8000:8000 -v "%cd%/logs.txt":/usr/app/logs.txt backend-example
+
+    Frontend:
+    docker build -t front-example .
+    docker run -p 5000:5000 front-example
+
+

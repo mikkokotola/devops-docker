@@ -99,3 +99,14 @@ When building the docker image, the build ended in the following error:
 EXERCISE 1.14
 docker build -t rails-example .
 docker run -it -p 3000:3000 rails-example
+
+EXERCISE 1.15
+https://cloud.docker.com/repository/registry-1.docker.io/mikkokotola/altituderoutes
+
+EXERCISE 1.16
+https://docker-heroku-example-hy.herokuapp.com/
+
+EXERCISE 1.17
+https://cloud.docker.com/repository/registry-1.docker.io/mikkokotola/py-dev-env
+
+The description is in the dockerhub repo's full description.

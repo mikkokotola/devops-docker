@@ -1,0 +1,10 @@
+version: '3.5' 
+
+services: 
+
+    firstvolume-ex: 
+      image: devopsdockeruh/first_volume_exercise 
+      build: .
+      volumes: 
+        - C:\\HY\\devops-docker\\Part2\\Ex2.1\\logs.txt:/usr/app/logs.txt
+      container_name: firstvolume

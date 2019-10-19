@@ -1,0 +1,22 @@
+version: '3.5'  
+
+services: 
+    frontend: 
+      image: mikkokotola/frontend 
+      build: C:\\HY\\frontend-example-docker
+      ports: 
+        - 5000:5000 
+      container_name: frontend
+    backend: 
+      image: mikkokotola/backend 
+      build: C:\\HY\\backend-example-docker
+      ports: 
+        - 8000:8000
+      volumes: 
+        - C:\\HY\\backend-example-docker\\logs.txt:/usr/app/logs.txt
+      container_name: backend
+      environment: 
+        - REDIS=redis1
+    redis:
+      image: redis:5
+      container_name: redis1

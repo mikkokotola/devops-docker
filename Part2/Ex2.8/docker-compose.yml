@@ -27,6 +27,7 @@ services:
     postgres:
       image: postgres:12
       container_name: postgres1
+      restart: unless-stopped
       environment:
         - POSTGRES_USER=zuper
         - POSTGRES_PASSWORD=yammeryummer

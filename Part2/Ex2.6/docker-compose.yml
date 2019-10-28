@@ -21,9 +21,14 @@ services:
         - DB_PASSWORD=yammeryummer
         - DB_NAME=ztore
         - DB_HOST=postgres1
+      depends_on:
+        - redis
+        - postgres
     redis:
       image: redis:5
       container_name: redis1
+      volumes:
+      - redisvol:/data
     postgres:
       image: postgres:12
       container_name: postgres1
@@ -32,3 +37,11 @@ services:
         - POSTGRES_USER=zuper
         - POSTGRES_PASSWORD=yammeryummer
         - POSTGRES_DB=ztore
+      volumes:
+      - postgresdb:/var/lib/postgresql/data
+
+volumes:
+  redisvol:
+  postgresdb:
+
+

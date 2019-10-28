@@ -1,0 +1,19 @@
+CHANGES TO THE CONFIGURATION IN EXERCISE 2.10:
+
+- Updated API address in the frontend Dockerfile to match that being served by NGinX:
+CMD API_URL=http://localhost/api/ npm start
+
+- Used direct references to containers in the nginx.conf
+
+- Removed ports-definitions from the docker-compose.yml for the backend and frontend
+
+- Added a CORS setup for NGINX (default_location)
+if ($http_origin ~* (.*\.localhost)) {
+    add_header 'Access-Control-Allow-Origin' "$http_origin";
+    add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, DELETE, PUT';
+    add_header 'Access-Control-Allow-Credentials' 'true';
+    add_header 'Access-Control-Allow-Headers' 'User-Agent,Keep-Alive,Content-Type';
+}
+if ($request_method = OPTIONS) {
+    return 204;
+}
